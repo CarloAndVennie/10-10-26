@@ -9,22 +9,19 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Jon Carlo & Vennie Ann">
     <meta property="og:description" content="Together with our families, we invite you to celebrate our wedding on October 10, 2026.">
- 
-    <meta property="og:image" content="https://carloandvennie.github.io/10-10-26/social-preview-v2.jpg">
+
+    <meta property="og:image" content="https://carloandvennie.github.io/10-10-26/social-preview.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Jon Carlo & Vennie Ann Wedding Invitation">
  
-    <meta property="og:image:alt" 
-      content="Jon Carlo & Vennie Ann Wedding Invitation">
- 
-  <meta property="og:url" 
-     content="https://carloandvennie.github.io/10-10-26/">
+    <meta property="og:url" content="https://carloandvennie.github.io/10-10-26/">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Jon Carlo & Vennie Ann">
     <meta name="twitter:description" content="Our wedding invitation • October 10, 2026">
-    <meta name="twitter:image" content="https://carloandvennie.github.io/10-10-26/social-preview-v2.jpg">
+    <meta name="twitter:image" content="https://carloandvennie.github.io/10-10-26/social-preview.jpg">
  
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -685,7 +682,7 @@ section:not(.hero).is-visible:before{transform:translateY(0);opacity:1}
 /* ===== CINEMATIC MOVIE-COVER LANDING PAGE ===== */
 .hero{
   min-height:100svh; min-height:100vh;
-  background:linear-gradient(180deg,rgba(10,18,24,.02) 38%,rgba(10,20,28,.10) 58%,rgba(8,18,27,.82) 100%),url("landingpage.jpg") center 49%/cover no-repeat !important;
+  background:linear-gradient(180deg,rgba(10,18,24,.02) 38%,rgba(10,20,28,.10) 58%,rgba(8,18,27,.82) 100%),url("landingpage.jpg") center 42%/cover no-repeat !important;
   display:flex;align-items:flex-end;justify-content:center;text-align:center;
 }
 .hero:before{display:none}
@@ -1371,9 +1368,19 @@ section, .wrap, .hero, .hero-content, .gallery-section, .gallery-stage,
 }
 .flower-role{width:min(220px,100%);margin:0 auto 18px}
 .final-role-row{
-  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:18px;
+  width:min(560px,100%);
+  margin:6px auto 0;
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  grid-template-rows:auto auto;
+  column-gap:28px;
+  row-gap:18px;
+  align-items:start;
 }
+.final-role-row .final-role:nth-child(1){grid-column:1;grid-row:1}
+.final-role-row .final-role:nth-child(2){grid-column:2;grid-row:2}
+.final-role-row .final-role:nth-child(3){grid-column:3;grid-row:1}
+
 .final-role-icon{
   width:38px;height:38px;margin:0 auto 7px;color:#496f86;
 }
@@ -1393,14 +1400,18 @@ section, .wrap, .hero, .hero-content, .gallery-section, .gallery-stage,
 @media(max-width:700px){
   .ent-role-separator{margin:22px auto 10px}
   .ent-role-separator svg{width:48px;height:22px}
-  .flower-role{margin-bottom:14px}
-  .final-role-row{gap:7px}
+  .flower-role{margin-bottom:16px}
+  .final-role-row{
+    width:100%;
+    column-gap:8px;
+    row-gap:14px;
+  }
   .final-role-icon{width:34px;height:34px}
   .final-role-label{font-size:12.5px;letter-spacing:.08em}
   .final-role-name{font-size:14.5px;line-height:1.32}
 }
 @media(max-width:360px){
-  .final-role-row{gap:4px}
+  .final-role-row{column-gap:4px;row-gap:12px}
   .final-role-icon{width:31px;height:31px}
   .final-role-label{font-size:11.5px}
   .final-role-name{font-size:13.2px}
@@ -1641,7 +1652,6 @@ section, .wrap, .hero, .hero-content, .gallery-section, .gallery-stage,
       </div>
 
       
-
 
       <div class="entourage-final-roles">
         <div class="final-role flower-role">
